@@ -1,0 +1,130 @@
+﻿<Window x:Class="FormularzXaml.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Formularz użytkownika"
+        Height="650" Width="580"
+        MinHeight="650" MinWidth="580"
+        WindowStartupLocation="CenterScreen"
+        Background="#EEF2F7"
+        FontFamily="Segoe UI"
+        FontSize="15">
+
+    <Border Background="White" CornerRadius="12"
+            Margin="25" Padding="25">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="165"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="110"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                       Text="Formularz użytkownika"
+                       FontSize="26" FontWeight="Bold"
+                       Foreground="#253858"/>
+
+            <Label Grid.Row="1" Grid.Column="0"
+                   Content="Imię:"
+                   VerticalAlignment="Center"/>
+
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     x:Name="txtImie"
+                     Height="34" Padding="6"
+                     VerticalContentAlignment="Center"
+                     BorderBrush="#BAC7D5"/>
+
+            <Label Grid.Row="2" Grid.Column="0"
+                   Content="Nazwisko:"
+                   VerticalAlignment="Center"/>
+
+            <TextBox Grid.Row="2" Grid.Column="1"
+                     x:Name="txtNazwisko"
+                     Height="34" Padding="6"
+                     VerticalContentAlignment="Center"
+                     BorderBrush="#BAC7D5"/>
+
+            <Label Grid.Row="3" Grid.Column="0"
+                   Content="Wiek:"
+                   VerticalAlignment="Center"/>
+
+            <TextBox Grid.Row="3" Grid.Column="1"
+                     x:Name="txtWiek"
+                     Height="34" Padding="6"
+                     VerticalContentAlignment="Center"
+                     BorderBrush="#BAC7D5"/>
+
+            <Label Grid.Row="4" Grid.Column="0"
+                   Content="Płeć:"
+                   VerticalAlignment="Center"/>
+
+            <Grid Grid.Row="4" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <RadioButton Grid.Column="0"
+                             x:Name="rbKobieta"
+                             Content="Kobieta"
+                             GroupName="Plec"
+                             VerticalAlignment="Center"/>
+
+                <RadioButton Grid.Column="1"
+                             x:Name="rbMezczyzna"
+                             Content="Mężczyzna"
+                             GroupName="Plec"
+                             VerticalAlignment="Center"/>
+            </Grid>
+
+            <Label Grid.Row="5" Grid.Column="0"
+                   Content="Data urodzenia:"
+                   VerticalAlignment="Center"/>
+
+            <DatePicker Grid.Row="5" Grid.Column="1"
+                        x:Name="dpDataUrodzenia"
+                        VerticalAlignment="Center"/>
+
+            <Label Grid.Row="6" Grid.Column="0"
+                   Content="Dodatkowe informacje:"
+                   VerticalAlignment="Center"/>
+
+            <TextBox Grid.Row="6" Grid.Column="1"
+                     x:Name="txtInformacje"
+                     Height="94" Padding="6"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     BorderBrush="#BAC7D5"/>
+
+            <Button Grid.Row="7" Grid.Column="1"
+                    x:Name="btnZapisz"
+                    Content="Zapisz dane"
+                    Height="38"
+                    Background="#2563EB"
+                    Foreground="White"
+                    BorderThickness="0"
+                    FontWeight="Bold"
+                    Cursor="Hand"
+                    Click="btnZapisz_Click"/>
+
+            <Label Grid.Row="8" Grid.ColumnSpan="2"
+                   x:Name="lblKomunikat"
+                   Content="Uzupełnij dane użytkownika."
+                   Foreground="#64748B"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        </Grid>
+    </Border>
+</Window>
